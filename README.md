@@ -18,7 +18,7 @@ In order for this to really work, you need to set all of your other slf4 log bin
 
     libraryDependencies ++= Seq(
         "org.slf4j" % "slf4j-api" % "1.7.0",
-        "ch.qos.logback" % "logback-classic" % "1.0.0" % "!test",
+        "ch.qos.logback" % "logback-classic" % "1.0.0" % "!test,*->default",
         "com.dadrox" % "quiet-slf4j" % "0.4" % "test")
 
 This way you get the quiet logger while running tests and the real logger in every other context.

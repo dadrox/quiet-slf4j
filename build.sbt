@@ -4,9 +4,12 @@ organization := "com.dadrox"
 
 version := "0.1"
 
-libraryDependencies += "junit" % "junit-dep" % "4.10"
+libraryDependencies ++= Seq(
+	"junit" % "junit-dep" % "4.10" % "test->default",
+	"org.slf4j" % "slf4j-api" % "1.7.0" % "provided",
+	"com.dadrox" % "sbt-junit" % "0.3" % "test")
 
-libraryDependencies += "org.slf4j" % "slf4j-api" % "1.7.0" % "provided"
+testFrameworks += new TestFramework("com.dadrox.sbt.junit.JunitFramework")
 
 crossPaths := false
 
