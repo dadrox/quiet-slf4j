@@ -2,7 +2,7 @@
 
 An slf4j logger that, by default, logs nothing.
 
-This is really intended to suppress log output during testing.
+This is intended to suppress log output during testing.
 
 It is written in Java, so should be usable almost anywhere.
 
@@ -18,7 +18,7 @@ In order for this to really work, you need to set all of your other slf4 log bin
 
     libraryDependencies ++= Seq(
         "org.slf4j" % "slf4j-api" % "1.7.0",
-        "com.dadrox" % "quiet-slf4j" % "0.4" % "test")
+        "com.dadrox" % "quiet-slf4j" % "0.1" % "test")
 
 This way you get the quiet logger while running tests and the real logger in every other context.
 
